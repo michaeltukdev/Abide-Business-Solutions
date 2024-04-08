@@ -647,6 +647,10 @@ video {
   margin-top: 100px;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -723,12 +727,22 @@ video {
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
 
 .rounded-3xl {
   border-radius: 1.5rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .border-0 {
@@ -876,6 +890,18 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-\[32px\] {
+  font-size: 32px;
+}
+
+.text-\[62px\] {
+  font-size: 62px;
+}
+
+.text-\[22px\] {
+  font-size: 22px;
 }
 
 .font-bold {
@@ -1070,6 +1096,10 @@ video {
     text-align: left;
   }
 
+  .md\:text-start {
+    text-align: start;
+  }
+
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1083,6 +1113,14 @@ video {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-\[84px\] {
+    font-size: 84px;
+  }
+
+  .md\:text-\[34px\] {
+    font-size: 34px;
   }
 }
 
@@ -1099,6 +1137,10 @@ video {
     max-width: 910px;
   }
 
+  .lg\:text-start {
+    text-align: start;
+  }
+
   .lg\:text-end {
     text-align: end;
   }
@@ -1106,5 +1148,13 @@ video {
   .lg\:text-8xl {
     font-size: 6rem;
     line-height: 1;
+  }
+
+  .lg\:text-\[34px\] {
+    font-size: 34px;
+  }
+
+  .lg\:text-\[84px\] {
+    font-size: 84px;
   }
 }
