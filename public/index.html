@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +8,40 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+
     <style>
-        
-        #menu-toggle:checked + #menu {
+        #menu-toggle:checked+#menu {
             display: block;
         }
-        
+
         .hover\:grow {
             transition: all 0.3s;
             transform: scale(1);
         }
-        
+
         .hover\:grow:hover {
             transform: scale(1.02);
         }
-        
-        .carousel-open:checked + .carousel-item {
+
+        .carousel-open:checked+.carousel-item {
             position: static;
             opacity: 100;
         }
-        
+
         .carousel-item {
             -webkit-transition: opacity 0.6s ease-out;
             transition: opacity 0.6s ease-out;
         }
-        
-        #carousel-1:checked ~ .control-1,
-        #carousel-2:checked ~ .control-2,
-        #carousel-3:checked ~ .control-3 {
+
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3 {
             display: block;
         }
-        
+
         .carousel-indicators {
             list-style: none;
             margin: 0;
@@ -51,43 +53,55 @@
             text-align: center;
             z-index: 10;
         }
-        
-        #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-        #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+
+        #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
             color: #000;
             /*Set to match the Tailwind colour you want the active one to be */
         }
     </style>
 </head>
+
 <body class="text-base leading-normal tracking-normal text-black bg-white">
     <!--Nav-->
     <nav id="header" class="top-0 z-30 w-full py-1 ">
-        <div class="container flex flex-wrap items-center justify-between w-full px-6 py-3 mx-auto mt-0 sm:justify-center">
+        <div
+            class="container flex flex-wrap items-center justify-between w-full px-6 py-3 mx-auto mt-0 sm:justify-center">
 
             <label for="menu-toggle" class="block cursor-pointer sm:hidden">
-                <svg class="text-black fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                <svg class="text-black fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 20 20">
                     <title>menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                 </svg>
             </label>
             <input class="hidden" type="checkbox" id="menu-toggle" />
 
-            <div class="order-2 hidden sm:flex sm:items-center sm:justify-between sm:w-auto font-syne" id="menu">
+            <div class="order-2 hidden w-full sm:flex sm:items-center sm:justify-between sm:w-auto font-syne" id="menu">
                 <nav>
                     <ul class="items-center justify-between w-full pt-4 text-base text-black sm:flex sm:pt-0">
-                        <li><a class="inline-block no-underline hover:text-[#8B74A4] hover:underline py-2 px-4 font-Syne md:text-xl tracking-wide font-semibold" href="#Home">Home</a></li>
-                        <li><a class="inline-block no-underline hover:text-[#8B74A4] hover:underline py-2 px-4  md:text-xl tracking-wide font-semibold" href="#About">About</a></li>
-                        <li><h1 class="hidden px-4 py-2 font-bold tracking-wide text-center sm:inline-block md:text-4xl">Abide Business Solutions</h1></li>
-                        <li><a class="inline-block no-underline hover:text-[#8B74A4] hover:underline py-2 px-4  md:text-xl tracking-wide font-semibold" href="#Services">Services</a></li>
-                        <li><a class="inline-block no-underline font-semibold hover:text-[#8B74A4] hover:underline py-2 px-4  md:text-xl tracking-wide" href="#Contact">Contact</a></li>
+                        <li><a class="inline-block no-underline hover:text-[#8B74A4] hover:underline py-2 px-4 font-Syne md:text-xl tracking-wide font-semibold"
+                                href="#Home">Home</a></li>
+                        <li><a class="inline-block no-underline hover:text-[#8B74A4] hover:underline py-2 px-4  md:text-xl tracking-wide font-semibold"
+                                href="#About">About</a></li>
+                        <li>
+                            <h1
+                                class="hidden px-4 py-2 font-bold tracking-wide text-center sm:inline-block md:text-4xl">
+                                Abide Business Solutions</h1>
+                        </li>
+                        <li><a class="inline-block no-underline hover:text-[#8B74A4] hover:underline py-2 px-4  md:text-xl tracking-wide font-semibold"
+                                href="#Services">Services</a></li>
+                        <li><a class="inline-block no-underline font-semibold hover:text-[#8B74A4] hover:underline py-2 px-4  md:text-xl tracking-wide"
+                                href="#Contact">Contact</a></li>
 
                     </ul>
                 </nav>
             </div>
 
             <div class="order-1 sm:hidden">
-                <a class="flex items-center font-bold tracking-wide text-center text-gray-800 no-underline hover:no-underline sm:text-lg font-syne" href="#">
+                <a class="flex items-center font-bold tracking-wide text-center text-gray-800 no-underline hover:no-underline sm:text-lg font-syne"
+                    href="#">
                     Abide Business Solutions
                 </a>
             </div>
@@ -95,58 +109,80 @@
 
     <div class="container relative mx-auto carousel">
         <div class="relative w-full overflow-hidden carousel-inner">
-            <input class="carousel-open" type="radio" id="Home" name="carousel" aria-hidden="true" hidden="" checked="checked">
+            <input class="carousel-open" type="radio" id="Home" name="carousel" aria-hidden="true" hidden=""
+                checked="checked">
             <div class="absolute opacity-0 carousel-item" style="height:100vh;">
-                <div class="flex block w-full h-full pt-6 mx-auto bg-right bg-cover md:pt-0 md:items-center" style="background-image: url(/images/new-back.jpg);">
-                    
-                    <div class="container flex items-center mx-auto">
-                        <div class="flex flex-col w-full px-6 tracking-wide md:ml-16 md:items-start">
-                            <div class="p-4 bg-white rounded-3xl lg:w-1/2">
-                                <p class="text-2xl font-bold text-black font-dmsans ">Simplifying Finances for Sustainable Growth</p>
-                                
-                                <p class="inline-block py-4 text-xl font-dmsans">Navigate the path to financial success with Abide Business Solutions. Step into a world of streamlined finances and business growth through our services. We're not just consultants; we're your roadmap to business prosperity.</p>
-                            </div>
+                <div class="flex block w-full h-full pt-6 mx-auto bg-right bg-cover md:pt-0 md:items-center"
+                    style="background-image: url('../images/new-back.jpg');">
+
+                    <div class="container flex items-center mx-auto ">
+                        <div class="flex flex-col tracking-wide x-6 md:ml-16 md:items-start lg:max-w-[910px]">
+                            <h1
+                                class="font-syne text-[84px] font-medium leading-[normal] tracking-[2.52px] text-white ">
+                                Lorem ipsum<br>dolor sit amet , cons.</h1>
+                            <p class="p-4 px-10 text-[34px] tracking-[2px] mt-5 bg-white rounded-3xl font-dmsans">Ut
+                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                dolore. eu fugiat nulla pariatur.</p>
                         </div>
                     </div>
 
                 </div>
             </div>
-        
+
         </div>
     </div>
 
     <div class="container py-8 mx-auto bg-white" id="About">
         <div class="container flex px-3 py-8 ">
-          <div class="flex flex-wrap w-full mx-auto">
-            <div class="flex w-full lg:w-full ">
-              <div class="flex flex-col items-center px-3 md:px-0 ">
-                <h3 class="text-xl font-bold tracking-wide text-center text-gray-900 font-syne md:text-2xl">The Heart of Abide</h3>
-                <hr class=" my-8 bg-[#8B74A4] w-1/3 ">
-                <!-- <hr class="w-11/12 h-px my-8 bg-gray-400 border-0"> -->
-                <p class="text-xl tracking-wide text-center font-syne md:text-xl">We lead by example, serving as a source of trust.</p>
-                
-                <div class="py-4 ">
-                    <p class="text-xl tracking-wide text-center font-dmsans md:text-2xl">At the heart of our mission is a commitment to collaborating with small businesses, guiding them towards enhanced efficiency and effectiveness. We begin by identifying areas ripe for improvement and then empower these organizations with the tools and resources needed to automate or outsource non-value-added processes. As a steadfast partner, we remain by their side, offering continuous support through training, process refinement, and the integration of cutting-edge technologies as their businesses flourish and expand.
-                    <br> <br> 
-                    Our vision is centered on the prosperity of small businesses, fueled by our dedication to sharing innovative insights into business processes and technology. Our values, rooted in innovation, empowerment, integrity, and inspiration, drive every aspect of our approach. We leverage technology to automate essential accounting processes, provide training to empower growth, uphold the highest standards of integrity, and lead by example as a source of inspiration for both our organization and the businesses we serve.
-                    <br> <br> 
-                    We are here to follow the law while employing the best practices and ensuring compliance with ethical standards in all our endeavors. Our overarching goal is to witness the growth and success of small businesses as we share innovations in business processes and technology.
-                    <br> <br>
+            <div class="flex flex-wrap w-full mx-auto">
+                <div class="flex w-full lg:w-full ">
+                    <div class="flex flex-col items-center px-3 md:px-0 ">
+                        <h3 class="text-xl font-bold tracking-wide text-center text-gray-900 font-syne md:text-2xl">The
+                            Heart of Abide</h3>
+                        <hr class=" my-8 bg-[#8B74A4] w-1/3 ">
+                        <!-- <hr class="w-11/12 h-px my-8 bg-gray-400 border-0"> -->
+                        <p class="text-xl tracking-wide text-center font-syne md:text-xl">We lead by example, serving as
+                            a source of trust.</p>
+
+                        <div class="py-4 ">
+                            <p class="text-xl tracking-wide text-center font-dmsans md:text-2xl">At the heart of our
+                                mission is a commitment to collaborating with small businesses, guiding them towards
+                                enhanced efficiency and effectiveness. We begin by identifying areas ripe for
+                                improvement and then empower these organizations with the tools and resources needed to
+                                automate or outsource non-value-added processes. As a steadfast partner, we remain by
+                                their side, offering continuous support through training, process refinement, and the
+                                integration of cutting-edge technologies as their businesses flourish and expand.
+                                <br> <br>
+                                Our vision is centered on the prosperity of small businesses, fueled by our dedication
+                                to sharing innovative insights into business processes and technology. Our values,
+                                rooted in innovation, empowerment, integrity, and inspiration, drive every aspect of our
+                                approach. We leverage technology to automate essential accounting processes, provide
+                                training to empower growth, uphold the highest standards of integrity, and lead by
+                                example as a source of inspiration for both our organization and the businesses we
+                                serve.
+                                <br> <br>
+                                We are here to follow the law while employing the best practices and ensuring compliance
+                                with ethical standards in all our endeavors. Our overarching goal is to witness the
+                                growth and success of small businesses as we share innovations in business processes and
+                                technology.
+                                <br> <br>
+                        </div>
+                    </div>
                 </div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
+    </div>
 
     </div>
     <div class="container mx-auto bg-[#8B74A4] text-white py-8" id="Services">
-          <div class="flex flex-wrap w-full mx-auto">
+        <div class="flex flex-wrap w-full mx-auto">
             <div class="flex flex-col w-full lg:w-full ">
                 <div class="flex flex-col items-center px-3 md:px-0">
                     <h1 class="p-4 text-3xl font-bold tracking-wide font-syne md:text-4xl">Our Services</h1>
                     <p class="px-4 text-lg text-center font-dmsans md:text-2xl">
-                        QuickBooks Service Provider <br> (Subscription Discounts, Setup Assistance, Training, Automation, Consulting, Clean up)
+                        QuickBooks Service Provider <br> (Subscription Discounts, Setup Assistance, Training,
+                        Automation, Consulting, Clean up)
                         <br>
                         <br>
                         Bookkeeping
@@ -161,51 +197,32 @@
                     </p>
                 </div>
             </div>
-          </div>
+        </div>
     </div>
 
-    <div class="container py-8 mx-auto text-white bg-black" id="Contact">
-        <div class="flex flex-wrap w-full mx-auto">
-          <div class="flex flex-col items-center justify-center w-full lg:w-full ">
-              <div class="flex flex-col items-center px-3 md:px-0">
-                <h1 class="text-2xl font-bold tracking-wide text-center font-syne md:text-5xl">Book a free consultation</h1>
-                <p class="tracking-wide text-center font-dmsans md:text-2xl">Abide Business Solutions, Simpsonville SC, </p>
-                <a class="tracking-wide text-center font-dmsans md:text-2xl" href="mailto:abidebusinesssolutions@gmail.com?subject=Book%20a%20free%20consultation&body=Hello,%20I%20am%20interested%20in%20booking%20a%20free%20consultation.%20Please%20contact%20me%20at%20your%20earliest%20convenience.">abidebusinesssolutions@gmail.com</a>
-              </div>
-          </div>
-        </div>
-  </div>
-    
-<footwe id="footer" class="top-0 z-30 w-full py-1">
+    <div class="py-8 mx-auto text-white bg-black" id="Contact">
+        <h5 class="py-32 text-6xl font-medium text-center lg:text-8xl font-syne">Book a free consultation.</h5>
+    </div>
 
-   
+    <footer id="footer" class="mt-[100px] mb-[50px] md:px-[90px]">
+        <div class="flex flex-col flex-wrap items-center justify-between md:flex-row">
+            <ul class="text-center md:text-left space-y-7">
+                <li class="footer-link">Deena Casagrande</li>
+                <li><a class="footer-link" href="mail:to:abidebusinesssolutions@gmail.com">abidebusinesssolutions@gmail.com</a></li>
+                <li class="footer-link">South Carolina, USA</li>
+                <li class="footer-link">+1 513-341-7375</li>
+            </ul>
 
-    <div class="container flex flex-col flex-wrap items-center justify-between w-full px-6 py-3 mx-auto mt-0 md:flex-row">
-        <div class="order-2 tracking-wide md:order-1 md:w-1/3 font-syne " id="menu">
-                <ul class="items-center justify-between pt-0 text-base text-center text-gray-700 md:text-left md:text-xl">
-                    <li><a class="inline-block px-4 py-2" href="#">Deena Casagrande</a></li>
-                    <li><a class="inline-block px-4 py-2" href="#">abidebusinesssolutions@gmail.com</a></li>
-                    <li><a class="inline-block px-4 py-2" href="#">South Carolina, USA</a></li>
-                    <li><a class="inline-block px-4 py-2" href="#">+1 513-341-7375</a></li>
-                </ul>
-        </div>
+            <img class="h-full sm:max-h-[150px] lg:max-h-[246px] md:m-0 my-12" src="../images/weblogo.svg">
 
-        <div class="flex flex-row order-1 md:w-1/3 md:justify-center">
-            <img src="/images/weblogo.svg">
-            </a>
-        </div>
-
-        <div class="hidden md:flex md:order-3 md:w-1/3 md:justify-end" id="menu">
-            <ul class="items-center justify-between pt-0 text-base text-gray-700">
-                <li><a class="inline-block no-underline hover:text-[#8B74A4] hover:underline py-2 px-4" href="#">Home</a></li>
-                <li><a class="inline-block no-underline hover:text-[#8B74A4] hover:underline py-2 px-4" href="#About">About</a></li>
-                <li><a class="inline-block no-underline hover:text-[#8B74A4] hover:underline py-2 px-4" href="#Services">Services</a></li>
-                <li><a class="inline-block no-underline hover:text-[#8B74A4] hover:underline py-2 px-4" href="#Contact">Contact</a></li>
+            <ul class="items-center justify-between pt-0 space-y-8 text-base text-gray-700">
+                <li class="text-center lg:text-end"><a class="footer-link" href="#">Home</a></li>
+                <li class="text-center lg:text-end"><a class="footer-link" href="#About">About</a></li>
+                <li class="text-center lg:text-end"><a class="footer-link" href="#Services">Services</a></li>
+                <li class="text-center lg:text-end"><a class="footer-link" href="#Contact">Contact</a></li>
             </ul>
         </div>
-        
-    </div>
-</nav>
+    </footer>
 
 </body>
 
